@@ -1,0 +1,23 @@
+<h3>Game of Life</h3>
+<form method="POST" action="/">
+  <input
+    type="submit"
+    value="click here to change"
+    name="action1"
+    style="font-size: 20px"
+  />
+  <input type="submit" value="reset" name="action2" style="font-size: 20px" />
+</form>
+
+<table style="font-size: 30">
+  {% for row in board %}
+  <tr>
+    {% for entry in row %}
+    <th>
+      {% if entry %} {{ black_square }} {% else %} {{ white_square }} {% endif
+      %}
+    </th>
+    {% endfor %}
+  </tr>
+  {% endfor %}
+</table>
